@@ -271,7 +271,6 @@ export const products = [
 ];
 
 export const categoriesTitles = [
-  { id: 0, title: "all" },
   { id: 1, title: "electronic" },
   { id: 2, title: "jeweley" },
   { id: 3, title: "men's clothing" },

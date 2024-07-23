@@ -1,7 +1,6 @@
 import React from "react";
 import RatingStar from "./RatingStar";
 const CategorieProduct = ({ title, image, price, rating: { rate } }) => {
-  console.log(rate)
   return (
     <div className=" border border-black p-4 flex rounded-md items-start w-[300px]  flex-col gap-y-3 ">
       <img src={image} alt={title} className="h-[120px] self-center" />
