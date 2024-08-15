@@ -1,11 +1,10 @@
 import React from "react";
 
-const RatingStar = ({ rate ,className}) => {
+const RatingStar = ({ rate, className }) => {
   const currentRate = rate.toFixed(0);
   let length = 5;
   const numbers = Array.from({ length }, (_, index) => index + 1);
 
-  console.log(numbers);
   return (
     <div className={` flex ${className}`}>
       {numbers.map((num) => (
@@ -16,6 +15,7 @@ const RatingStar = ({ rate ,className}) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
+          key={num}
           className={` size-6 stroke-yellow-500 ${
             num <= currentRate && "fill-yellow-500"
           }`}
