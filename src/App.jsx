@@ -15,24 +15,15 @@ export default function App() {
         <Route path="/my-cart" element={<MyCart />} />
       </Routes>
       <Footer />
-      <Toaster toastOptions={{
-    // Define default options
-    className: '',
-    duration: 5000,
-    style: {
-      background: '#363636',
-      color: '#fff',
-    },
+      <Toaster
+        toastOptions={{
+          // Define default options
+          className: "",
+          duration: 1000,
 
-    // Default options for specific types
-    success: {
-      duration: 3000,
-      theme: {
-        primary: 'green',
-        secondary: 'black',
-      },
-    },
-  }}/>
+          // Default options for specific types
+        }}
+      />
     </>
   );
 }

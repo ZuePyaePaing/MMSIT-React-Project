@@ -2,11 +2,16 @@ import React from "react";
 import RatingStar from "./RatingStar";
 import { useNavigate } from "react-router-dom";
 import useCartStore from "../store/useCart.Store";
+import toast from "react-hot-toast";
 
 const CategorieProduct = ({ id, title, image, price, rating: { rate } }) => {
   const { addCart, carts } = useCartStore();
   const nav = useNavigate();
 
+  const handleAdded = (event) => {
+    event.stopPropagation();
+    toast.error('Product is Already.')
+  };
   const handleNavigate = () => {
     nav(`/detail/${id}`);
   };
@@ -29,7 +34,7 @@ const CategorieProduct = ({ id, title, image, price, rating: { rate } }) => {
         <p className=" text-sm font-semibold text-nowrap">Price ${price}</p>
         {isAddedToCart ? (
           <button
-            onClick={handleNavigate}
+            onClick={handleAdded}
             className=" text-nowrap text-sm shadow-md text-white transition-all duration-150  rounded-md py-2 px-4 capitalize bg-teal-900 active:scale-90 "
           >
             Added

@@ -3,6 +3,7 @@ import useCategoryStore from "../store/useCategory.Store";
 
 const CategorieBtn = ({ id, title, isActive }) => {
   const { activeCategory } = useCategoryStore();
+  
   const handleCategory = () => {
     activeCategory(id);
   };

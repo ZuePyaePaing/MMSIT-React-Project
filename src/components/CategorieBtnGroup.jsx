@@ -1,6 +1,7 @@
 import React from "react";
 import CategorieBtn from "./CategorieBtn";
 import useCategoryStore from "../store/useCategory.Store";
+
 const CategorieBtnGroup = () => {
   const { categories } = useCategoryStore();
   return (
